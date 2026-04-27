@@ -91,6 +91,7 @@ def batch_convert(root_input, root_output):
     print("\n🎉 全部文件转换完毕！")
 
 # ===================== 只需要改这两个路径 =========================
+# Genius!
 if __name__ == "__main__":
     # 输入总文件夹：里面是各个类别子文件夹，每个类别里有csv文件夹
     INPUT_ROOT_UP = r"/home/levono/MachineLearning/DeepLearning/DAS/Object_detection/DAS_object_detection/上缆"
