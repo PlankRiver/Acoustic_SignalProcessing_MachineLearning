@@ -47,6 +47,7 @@ source .venv/bin/activate
 - Different subfolders may require different dependencies.
 - Code style may vary across topics because this repository reflects progressive academic learning and experimentation.
 - Most examples are designed for study, extension, and method understanding rather than production deployment.
+- I am still learning and improving; feedback and suggestions are sincerely welcome.
 
 ## Data Availability
 
