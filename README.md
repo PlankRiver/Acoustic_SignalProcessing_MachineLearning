@@ -1,26 +1,18 @@
 # MachineLearning
 
-A personal open-source learning repository for machine learning, deep learning, signal processing, applied math, and computational modeling.
+An academic learning repository focused on acoustics, acoustic signal processing, and machine learning methods for scientific computing.
 
-This project is organized as a practical notebook-style codebase with multiple independent topic folders.
+The codebase is organized as a multi-topic study workspace with independent modules for algorithms, numerical methods, and deep learning practice.
 
-## Repository Scope
+## Academic Focus
 
-This repository includes:
-- learning notes and runnable scripts
-- algorithm practice and experiments
-- small project demos across ML/DL and related engineering topics
+My primary background is in acoustics.  
+This repository is mainly used to study and implement:
+- acoustic signal processing workflows
+- machine learning and deep learning methods relevant to acoustic data
+- mathematical and computational tools that support research-oriented modeling and analysis
 
-This repository does **not** include private datasets.
-
-## Dataset & Privacy Policy
-
-To protect private data, dataset-like files are not published in this open-source repository.
-
-Restricted private data file types:
-- `.jpg`, `.jpeg`, `.png`, `.wav`, `.mat`, `.csv`
-
-If you run code that depends on data, prepare your own local dataset paths and keep them out of Git tracking.
+The repository also contains supporting code for computational physics, applied mathematics, and Python fundamentals used in technical learning.
 
 ## Main Directory Layout
 
@@ -50,10 +42,11 @@ python -m venv .venv
 source .venv/bin/activate
 ```
 
-## Notes
+## Learning Notes
 
-- Different folders may have different dependency versions.
-- This is a learning-oriented monorepo, so code style and structure can vary by topic.
+- Different subfolders may require different dependencies.
+- Code style may vary across topics because this repository reflects progressive academic learning and experimentation.
+- Most examples are designed for study, extension, and method understanding rather than production deployment.
 
 ## License
 
