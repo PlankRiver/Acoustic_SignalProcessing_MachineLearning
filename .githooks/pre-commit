@@ -1,0 +1,74 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Dataset commit guard.
+# Override in rare cases: BYPASS_DATASET_GUARD=1 git commit ...
+if [[ "${BYPASS_DATASET_GUARD:-0}" == "1" ]]; then
+  exit 0
+fi
+
+MAX_DATASET_FILES="${DATASET_MAX_FILES:-500}"
+MAX_DATASET_BYTES="${DATASET_MAX_BYTES:-157286400}" # 150 MB
+MAX_SINGLE_FILE_BYTES="${DATASET_MAX_SINGLE_FILE_BYTES:-15728640}" # 15 MB
+
+sample_allowed_regex='(^|/)(data|dataset|datasets)/samples(/|$)|(^|/)sample_data(/|$)'
+data_path_regex='(^|/)(data|dataset|datasets)(/|$)'
+data_ext_regex='\.(csv|tsv|jsonl|parquet|npy|npz|h5|hdf5|pt|pth|ckpt|zip|7z|rar|tar|gz|bz2|xz|jpg|jpeg|png|bmp|tif|tiff|wav|mp3|flac|ogg|m4a|mp4|avi|mov|mkv)$'
+
+data_file_count=0
+data_total_bytes=0
+blocked_paths=()
+oversized_files=()
+
+while IFS= read -r -d '' file; do
+  [[ -f "$file" ]] || continue
+
+  lower_file="${file,,}"
+  is_data=0
+
+  if [[ "$lower_file" =~ $data_path_regex ]] || [[ "$lower_file" =~ $data_ext_regex ]]; then
+    is_data=1
+  fi
+
+  if [[ "$is_data" -eq 0 ]]; then
+    continue
+  fi
+
+  size_bytes=$(wc -c < "$file" | tr -d ' ')
+  data_file_count=$((data_file_count + 1))
+  data_total_bytes=$((data_total_bytes + size_bytes))
+
+  if (( size_bytes > MAX_SINGLE_FILE_BYTES )); then
+    oversized_files+=("$file ($size_bytes bytes)")
+  fi
+
+  if [[ ! "$lower_file" =~ $sample_allowed_regex ]]; then
+    blocked_paths+=("$file")
+  fi
+done < <(git diff --cached --name-only --diff-filter=ACM -z)
+
+if (( ${#blocked_paths[@]} > 0 )); then
+  echo "[dataset-guard] Commit blocked: detected data files outside samples directories."
+  echo "Allowed samples directories: data/samples/, datasets/samples/, sample_data/"
+  echo "Move these files into sample dirs or unstage them:"
+  printf '  - %s\n' "${blocked_paths[@]}"
+  exit 1
+fi
+
+if (( ${#oversized_files[@]} > 0 )); then
+  echo "[dataset-guard] Commit blocked: single data file exceeds limit ${MAX_SINGLE_FILE_BYTES} bytes."
+  printf '  - %s\n' "${oversized_files[@]}"
+  exit 1
+fi
+
+if (( data_file_count > MAX_DATASET_FILES )); then
+  echo "[dataset-guard] Commit blocked: data file count ${data_file_count} > ${MAX_DATASET_FILES}."
+  exit 1
+fi
+
+if (( data_total_bytes > MAX_DATASET_BYTES )); then
+  echo "[dataset-guard] Commit blocked: total data size ${data_total_bytes} bytes > ${MAX_DATASET_BYTES} bytes."
+  exit 1
+fi
+
+exit 0
