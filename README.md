@@ -48,6 +48,11 @@ source .venv/bin/activate
 - Code style may vary across topics because this repository reflects progressive academic learning and experimentation.
 - Most examples are designed for study, extension, and method understanding rather than production deployment.
 
+## Data Availability
+
+Due to privacy constraints, the original datasets are not publicly released in this repository.  
+Only source code and trained model files are provided for open-source sharing.
+
 ## License
 
 This project is released under the MIT License. See [LICENSE](./LICENSE).
