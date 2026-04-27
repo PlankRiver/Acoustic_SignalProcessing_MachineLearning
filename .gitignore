@@ -1,0 +1,93 @@
+# VCS
+.git/
+
+# Python cache and build
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+build/
+dist/
+
+# Virtual environments and local tool state
+.venv/
+.venv-*/
+venv/
+env/
+.conda/
+.codex
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints/
+
+# Logs and runtime
+*.log
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+
+# ML artifacts / datasets / binaries
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.h5
+*.pb
+*.ftr
+*.parquet
+*.feather
+*.npy
+*.npz
+*.hdf5
+*.pkl
+*.joblib
+*.rar
+*.zip
+*.7z
+*.tar
+*.gz
+*.bz2
+*.xz
+*.csv
+
+# Common experiment output dirs
+runs/
+wandb/
+mlruns/
+checkpoints/
+artifacts/
+outputs/
+
+# Project-local heavy data dirs (if present)
+data/
+datasets/
+
+# Backups of nested repositories
+.git_backup_nested/
+*.git_backup_nested/
+**/.git_backup_nested/
+
+# Audio / media datasets
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.m4a
+*.aac
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Large image data
+*.tif
+*.tiff
+*.bmp

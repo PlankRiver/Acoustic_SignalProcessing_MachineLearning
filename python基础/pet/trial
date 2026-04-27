@@ -1,0 +1,22 @@
+age_upon_intake,animal_id,animal_type,breed,color,datetime,datetime2,found_location,intake_condition,intake_type,name,sex_upon_intake
+8 years,A706918,Dog,English Springer Spaniel,White/Liver,2015-07-05T12:59:00.000,2015-07-05T12:59:00.000,9409 Bluegrass Dr in Austin (TX),Normal,Stray,Belle,Spayed Female
+11 months,A724273,Dog,Basenji Mix,Sable/White,2016-04-14T18:43:00.000,2016-04-14T18:43:00.000,2818 Palomino Trail in Austin (TX),Normal,Stray,Runster,Intact Male
+4 weeks,A665644,Cat,Domestic Shorthair Mix,Calico,2013-10-21T07:59:00.000,2013-10-21T07:59:00.000,Austin (TX),Sick,Stray,,Intact Female
+4 years,A682524,Dog,Doberman Pinsch/Australian Cattle Dog,Tan/Gray,2014-06-29T10:38:00.000,2014-06-29T10:38:00.000,800 Grove Blvd in Austin (TX),Normal,Stray,Rio,Neutered Male
+2 years,A743852,Dog,Labrador Retriever Mix,Chocolate,2017-02-18T12:46:00.000,2017-02-18T12:46:00.000,Austin (TX),Normal,Owner Surrender,Odin,Neutered Male
+2 years,A708452,Dog,Labrador Retriever Mix,Black/White,2015-07-30T14:37:00.000,2015-07-30T14:37:00.000,Austin (TX),Normal,Public Assist,Mumble,Intact Male
+5 months,A731435,Cat,Domestic Shorthair Mix,Cream Tabby,2016-08-08T17:52:00.000,2016-08-08T17:52:00.000,Austin (TX),Normal,Owner Surrender,*Casey,Neutered Male
+2 years,A760053,Dog,Chihuahua Shorthair,White/Tan,2017-10-11T15:46:00.000,2017-10-11T15:46:00.000,8800 South First Street in Austin (TX),Normal,Stray,,Intact Male
+5 months,A707375,Dog,Pit Bull,Brown/White,2015-07-11T18:19:00.000,2015-07-11T18:19:00.000,Galilee Court And Damita Jo Dr in Manor (TX),Normal,Stray,*Candy Cane,Intact Female
+2 years,A696408,Dog,Chihuahua Shorthair,Tricolor,2015-02-04T12:58:00.000,2015-02-04T12:58:00.000,9705 Thaxton in Austin (TX),Normal,Stray,*Pearl,Intact Female
+2 years,A743114,Cat,Domestic Shorthair Mix,Black/White,2017-02-04T10:10:00.000,2017-02-04T10:10:00.000,208 Beaver St in Austin (TX),Injured,Stray,,Intact Female
+14 years,A657188,Cat,Domestic Shorthair Mix,Brown Tabby/White,2013-11-10T17:19:00.000,2013-11-10T17:19:00.000,Austin (TX),Normal,Owner Surrender,Tommy,Neutered Male
+4 weeks,A707658,Cat,Domestic Shorthair Mix,Black/White,2015-07-15T17:43:00.000,2015-07-15T17:43:00.000,6118 Fairway in Austin (TX),Normal,Stray,*Mint,Intact Female
+1 month,A736287,Cat,Domestic Shorthair Mix,Torbie,2016-10-08T11:53:00.000,2016-10-08T11:53:00.000,South First And Stassney in Austin (TX),Normal,Stray,*Twilight,Intact Female
+2 months,A697950,Dog,Australian Cattle Dog/Labrador Retriever,Tan/White,2015-03-04T11:22:00.000,2015-03-04T11:22:00.000,1501 S Fm 973 in Austin (TX),Normal,Stray,,Intact Female
+18 years,A298074,Dog,Parson Russell Terrier Mix,Black/White,2015-09-06T14:21:00.000,2015-09-06T14:21:00.000,1801 Westridge in Austin (TX),Normal,Stray,Stumpy,Spayed Female
+2 years,A707974,Cat,Domestic Shorthair Mix,Blue,2015-07-20T18:13:00.000,2015-07-20T18:13:00.000,2307 Ventura in Austin (TX),Normal,Stray,*Cleopatra,Intact Female
+5 months,A682230,Dog,Maltese Mix,White,2014-06-25T16:27:00.000,2014-06-25T16:27:00.000,3737 Keats Dr in Austin (TX),Normal,Stray,,Intact Female
+4 months,A749436,Dog,Dachshund Mix,Brown/White,2017-05-15T09:50:00.000,2017-05-15T09:50:00.000,East Pleasant Valley And Stassney in Austin (TX),Normal,Stray,,Intact Male
+1 year,A722979,Other,Bat Mix,Brown,2016-03-24T16:39:00.000,2016-03-24T16:39:00.000,4100 Westbank Dr in Austin (TX),Normal,Wildlife,,Unknown
+2 years,A696205,Cat,Domestic Shorthair Mix,Black,2015-02-12T11:57:00.000,2015-02-12T11:57:00.000,Austin (TX),Normal,Owner Surrender,Roo,Spayed Female

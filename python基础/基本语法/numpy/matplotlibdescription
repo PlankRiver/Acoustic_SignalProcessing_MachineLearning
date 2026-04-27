@@ -1,0 +1,119 @@
+1. 颜色（Color）
+Matplotlib 支持多种颜色指定方式：
+
+(1) 基本颜色名称
+颜色名	示例代码	颜色预览
+'red'	color='red'	🔴
+'blue'	color='blue'	🔵
+'green'	color='green'	🟢
+'black'	color='black'	⚫
+'cyan'	color='cyan'	🟦 (浅蓝)
+'magenta'	color='magenta'	🟣
+'yellow'	color='yellow'	🟡
+(2) 缩写代码
+缩写	颜色	示例代码
+'r'	红色	color='r'
+'g'	绿色	color='g'
+'b'	蓝色	color='b'
+'c'	青色	color='c'
+'m'	品红	color='m'
+'y'	黄色	color='y'
+'k'	黑色	color='k'
+'w'	白色	color='w'
+(3) RGB/RGBA 值
+RGB（0-1 范围）：color=(0.2, 0.4, 0.8)
+
+RGBA（带透明度）：color=(0.2, 0.4, 0.8, 0.5)
+
+十六进制：color='#FF5733'（橙色）
+
+2. 线型（Linestyle）
+通过 linestyle 或缩写 ls 指定线条样式：
+
+(1) 基本线型
+线型名称	缩写	示例代码	效果
+'solid'	'-'	linestyle='-'	──────────
+'dashed'	'--'	linestyle='--'	─ ─ ─ ─ ─
+'dotted'	':'	linestyle=':'	··········
+'dashdot'	'-.'	linestyle='-.'	─·─·─·─·─
+(2) 自定义线型
+元组格式：(offset, (on_off_seq))
+例如：linestyle=(0, (5, 2, 1, 2)) 表示 5点长线，2点空白，1点短线，2点空白。
+
+3. 标记（Marker）
+通过 marker 指定数据点的标记样式：
+
+(1) 常用标记
+标记名称	缩写	示例代码	效果
+'o'	圆圈	marker='o'	⚪
+'s'	方形	marker='s'	⬛
+'^'	上三角	marker='^'	🔺
+'v'	下三角	marker='v'	🔻
+'*'	星号	marker='*'	✱
+'+'	加号	marker='+'	➕
+'x'	叉号	marker='x'	❌
+'D'	菱形	marker='D'	🔶
+(2) 高级标记控制
+标记大小：markersize=10 或 ms=10
+
+标记颜色：markerfacecolor='red'（填充色）、markeredgecolor='blue'（边框色）
+
+标记边框宽度：markeredgewidth=2 或 mew=2
+
+4. 综合示例
+python
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(0, 10, 20)
+y = np.sin(x)
+
+plt.figure(figsize=(10, 5))
+
+# 示例1：红色虚线 + 圆圈标记
+plt.plot(x, y,
+         color='red',
+         linestyle='--',
+         marker='o',
+         markersize=8,
+         label='Line 1')
+
+# 示例2：青色点线 + 星号标记
+plt.plot(x, y + 0.5,
+         color='#00FFCC',
+         linestyle=':',
+         marker='*',
+         markeredgecolor='black',
+         label='Line 2')
+
+plt.title("Line Styles Example")
+plt.legend()
+plt.grid()
+plt.show()
+输出效果：
+Matplotlib Line Styles
+
+5. 快捷组合写法
+在 plt.plot() 中，可以用一个字符串同时指定颜色、线型和标记：
+
+python
+# 格式: '[颜色][线型][标记]'
+plt.plot(x, y, 'ro--')     # 红色圆圈 + 虚线
+plt.plot(x, y, 'g^:')      # 绿色上三角 + 点线
+plt.plot(x, y, 'bs-', lw=2)# 蓝色方形 + 实线（线宽2）
+6. 完整颜色列表
+Matplotlib 支持所有 CSS/XKCD 颜色名称，例如：
+
+python
+plt.plot(x, y, color='xkcd:sky blue')  # XKCD 天蓝色
+plt.plot(x, y, color='tab:orange')    # Matplotlib 默认橙色
+查看所有颜色：
+
+python
+import matplotlib.colors as mcolors
+print(mcolors.CSS4_COLORS)  # CSS4 颜色
+print(mcolors.XKCD_COLORS)  # XKCD 颜色
+7. 总结
+类别	选项示例	关键参数
+颜色	'red', '#FF5733', (0.2, 0.4, 0.8)	color/c
+线型	'-', `

@@ -1,0 +1,46 @@
+# Python cache/build
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.codex
+
+# Logs/temp/outputs
+*.log
+tmp/
+outputs/
+runs/
+checkpoints/
+weights/
+*.pt
+*.pth
+*.onnx
+
+# Large datasets and generated data
+ROISF/
+ROISF_test/
+Object_detection/ROISF_images/
+DAS_classification/data/
+
+# Raw data formats
+*.mat
+*.h5
+*.hdf5
+*.npy
+*.npz
