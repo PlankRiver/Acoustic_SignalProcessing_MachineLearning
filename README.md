@@ -1,59 +1,46 @@
-# MachineLearning
+# Acoustic_SignalProcessing_MachineLearning
 
-An academic learning repository focused on acoustics, acoustic signal processing, and machine learning methods for scientific computing.
+A personal academic-learning repository centered on acoustics, acoustic signal processing, machine learning, and supporting mathematical/computational methods.
 
-The codebase is organized as a multi-topic study workspace with independent modules for algorithms, numerical methods, and deep learning practice.
+## Research and Learning Scope
 
-## Academic Focus
+This repository is mainly used to study and practice:
+- acoustic signal processing methods
+- machine learning and deep learning workflows for signal/audio tasks
+- mathematical and computational tools for scientific modeling
+- algorithmic templates used in technical competitions and research
 
-My primary background is in acoustics.  
-This repository is mainly used to study and implement:
-- acoustic signal processing workflows
-- machine learning and deep learning methods relevant to acoustic data
-- mathematical and computational tools that support research-oriented modeling and analysis
+## Project Structure
 
-The repository also contains supporting code for computational physics, applied mathematics, and Python fundamentals used in technical learning.
-
-## Main Directory Layout
-
-- `Acoustic/` - speech/audio feature and model experiments
-- `Computational_Physics/` - ODE/PDE and numerical simulation code
-- `DeepLearning/` - neural network experiments (MLP/CNN/RNN/Transformer/CV)
-- `Digital Signal Processing/` - signal analysis and DSP practice
-- `Math/` - probability, statistics, and algorithm notes
-- `Practicle_MachineLearning/` - practical ML exercises
-- `python_elementary/` - Python/Numpy/Pandas/Matplotlib fundamentals
-- `The-common-algorithm-in-MCM-ICM/` - common algorithm implementations
-- `z_scripts/` - utility scripts and helper tools
+- `.githooks/` - local git hook scripts for repository automation
+- `Acoustic/` - acoustic/speech related feature extraction and modeling experiments
+- `Computational_Physics/` - numerical methods and simulation practice
+- `DeepLearning/` - deep learning experiments and model implementations
+- `Digital Signal Processing/` - classic DSP analysis and coding exercises
+- `MCM_Materia/` - modeling competition materials and supporting resources
+- `Math/` - probability, statistics, and applied mathematics notes/code
+- `Practicle_MachineLearning/` - practical machine learning exercises
+- `The-common-algorithm-in-MCM-ICM/` - commonly used algorithms for MCM/ICM problems
+- `python_elementary/` - Python fundamentals and scientific-computing basics
+- `z_scripts/` - helper scripts (automation, sync, utilities)
 
 ## Quick Start
 
-1. Clone the repository.
-2. Create and activate a Python environment.
-3. Install required packages for the specific subproject you want to run.
-4. Run scripts from the corresponding module directory.
-
-Example:
-
 ```bash
-git clone https://github.com/PlankRiver/MachineLearning.git
-cd MachineLearning
+git clone https://github.com/PlankRiver/Acoustic_SignalProcessing_MachineLearning.git
+cd Acoustic_SignalProcessing_MachineLearning
 python -m venv .venv
 source .venv/bin/activate
 ```
 
-## Learning Notes
+Then install dependencies per subproject and run code inside the corresponding folder.
 
-- Different subfolders may require different dependencies.
-- Code style may vary across topics because this repository reflects progressive academic learning and experimentation.
-- Most examples are designed for study, extension, and method understanding rather than production deployment.
-- I am still learning and improving; feedback and suggestions are sincerely welcome.
+## Notes
 
-## Data Availability
-
-Due to privacy constraints, the original datasets are not publicly released in this repository.  
-Only source code and trained model files are provided for open-source sharing.
+- Different folders may require different Python/package environments.
+- The repository is organized for study and experimentation, so coding style may vary across modules.
+- Some datasets are not included due to privacy or source restrictions.
 
 ## License
 
-This project is released under the MIT License. See [LICENSE](./LICENSE).
+This project is licensed under the MIT License. See [LICENSE](./LICENSE).
