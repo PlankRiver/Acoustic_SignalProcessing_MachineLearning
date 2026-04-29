@@ -91,3 +91,12 @@ datasets/
 *.tif
 *.tiff
 *.bmp
+
+# Label and annotation files (do not upload)
+*.json
+*.txt
+
+# DAS YOLO generated outputs
+DeepLearning/DAS/Object_detection/Yolov3/pred_json/
+DeepLearning/DAS/Object_detection/Yolov3/runs/
+DeepLearning/DAS/Object_detection/Yolov3/datasets/

@@ -20,11 +20,17 @@ reference_file_count=0
 reference_total_bytes=0
 blocked_paths=()
 reference_oversized_files=()
+blocked_text_json_paths=()
 
 while IFS= read -r -d '' file; do
   [[ -f "$file" ]] || continue
 
   lower_file="${file,,}"
+  if [[ "$lower_file" =~ \.(txt|json)$ ]]; then
+    blocked_text_json_paths+=("$file")
+    continue
+  fi
+
   if [[ ! "$lower_file" =~ $reference_ext_regex ]]; then
     continue
   fi
@@ -41,6 +47,13 @@ while IFS= read -r -d '' file; do
     reference_oversized_files+=("$file ($size_bytes bytes)")
   fi
 done < <(git diff --cached --name-only --diff-filter=ACM -z)
+
+if (( ${#blocked_text_json_paths[@]} > 0 )); then
+  echo "[dataset-guard] Commit blocked: .txt and .json files are not allowed in this repository."
+  echo "Unstage or rename these files:"
+  printf '  - %s\n' "${blocked_text_json_paths[@]}"
+  exit 1
+fi
 
 if (( ${#blocked_paths[@]} > 0 )); then
   echo "[dataset-guard] Commit blocked: detected restricted reference files outside samples directories."
